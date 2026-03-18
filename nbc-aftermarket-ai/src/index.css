@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+  /* Colors */
+  --nbc-blue: #003A8F;
+  --nbc-blue-dark: #002b6b;
+  --nbc-blue-light: #3362a5;
+  --accent-blue: #0056b3;
+  --bg-color: #f4f7f9;
+  --surface-color: #ffffff;
+  --text-main: #2c3e50;
+  --text-muted: #5c6e80;
+  --border-color: #e1e8ed;
+  
+  --success: #2e7d32;
+  --warning: #ed6c02;
+  --danger: #d32f2f;
+  
+  /* Typography */
+  --font-family: 'Roboto', sans-serif;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.05);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.05);
+  
+  /* Transitions */
+  --transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 500;
+  color: var(--nbc-blue);
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Utilities */
+.card {
+  background: var(--surface-color);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.card-hover:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  font-family: var(--font-family);
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background-color: var(--nbc-blue);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--nbc-blue-dark);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--nbc-blue);
+  border: 1px solid var(--nbc-blue);
+}
+
+.btn-outline:hover {
+  background-color: rgba(0, 58, 143, 0.05);
+}
+
+.badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge-success {
+  background-color: rgba(46, 125, 50, 0.1);
+  color: var(--success);
+}
+
+.badge-warning {
+  background-color: rgba(237, 108, 2, 0.1);
+  color: var(--warning);
+}
+
+.badge-danger {
+  background-color: rgba(211, 47, 47, 0.1);
+  color: var(--danger);
+}
+
+/* Page Layout */
+.page-container {
+  padding: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-title {
+  font-size: 1.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.page-subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
