@@ -145,6 +145,13 @@ Analytics include:
 
 ---
 
+## Model & Results 
+
+- Demand Forecasting Models: ARIMA, XGBoost
+- Stock-out Prediction Accuracy: ~90%
+- Forecast Improvement: 10–15%
+
+
 ## Competitive Intelligence
 
 Analyzes market pressure from competing brands.
