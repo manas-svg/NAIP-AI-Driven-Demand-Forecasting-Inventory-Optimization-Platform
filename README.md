@@ -1,282 +1,179 @@
 # NBC Aftermarket Intelligence Platform (NAIP)
 
-AI-Driven Analytics for Industrial Bearing Aftermarket Operations
+AI-driven analytics for industrial bearing aftermarket operations.
 
 ---
 
 ## Overview
 
-The **NBC Aftermarket Intelligence Platform (NAIP)** is an AI-powered analytics system designed to help **NBC Bearings (National Engineering Industries Ltd.)** improve decision-making in its industrial aftermarket business.
+The NBC Aftermarket Intelligence Platform (NAIP) is a web-based analytics dashboard designed to help NBC Bearings make smarter decisions in the aftermarket business. It combines demand forecasting, dealer intelligence, inventory insights, and competitive analysis into one simple interface.
 
-NBC Bearings is one of India's largest bearing manufacturers, producing **200+ million bearings annually** across thousands of variants and serving industries such as automotive, steel, power, mining, and railways. The company distributes products through a **large network of authorized dealers and retailers across India**.
-
-Despite strong manufacturing capacity, aftermarket sales often rely on **dealer demand signals, manual forecasting, and reactive inventory planning**.
-
-This project demonstrates how **AI-driven analytics, dealer intelligence, and predictive modeling** can transform NBC’s aftermarket operations into a **data-driven decision system**.
+This project demonstrates how data-driven decision-making can improve forecasting accuracy, reduce stock-outs, and support better supply chain planning.
 
 ---
 
-# Problem Statement
+## Why this project matters
 
-Industrial bearing aftermarket sales face several operational challenges:
+Industrial bearing aftermarket sales often face challenges such as:
 
-• Limited visibility into **dealer-level demand patterns**
-• Difficulty forecasting **regional demand spikes**
-• Inventory imbalances across warehouses
-• Competitive pressure from **low-cost imports**
-• Reactive maintenance and replacement cycles
+- limited visibility into dealer-level demand
+- difficulty predicting regional demand spikes
+- inventory imbalance across warehouses
+- pressure from competitor brands
+- reactive maintenance and replacement planning
 
-These inefficiencies can lead to:
-
-• Stock-outs of critical bearings
-• Excess inventory in low-demand regions
-• Lost aftermarket revenue opportunities
+The platform helps address these issues with clear visual dashboards and business-focused insights.
 
 ---
 
-# Project Objective
+## Key features
 
-The goal of this platform is to build an **AI-driven aftermarket analytics system** capable of:
-
-• Predicting bearing demand across industries and regions
-• Analyzing dealer performance and repeat orders
-• Identifying inventory risks and stock-outs
-• Benchmarking competitor pressure in different segments
-• Providing actionable insights for sales and supply chain teams
-
----
-
-# Dataset Description
-
-Since NBC’s internal data is proprietary, this project uses a **synthetic dataset designed to replicate realistic aftermarket business patterns**.
-
-### Dataset Size
-
-* **3400 rows**
-* **2020–2025 historical data**
-* **24+ analytical columns**
+- Executive dashboard with revenue, dealer, and inventory metrics
+- Demand analytics for regional and industry-level trends
+- Dealer intelligence for repeat orders and performance monitoring
+- Inventory and stock-out insights
+- Competitive intelligence analysis
+- Predictive maintenance insights for failure risk monitoring
 
 ---
 
-## Dataset Features
+## Screenshots
 
-| Column                  | Description                                 |
-| ----------------------- | ------------------------------------------- |
-| Year                    | Sales year (2020–2025)                      |
-| Month                   | Sales month with Q4 demand spike            |
-| Region                  | North, East, West, South                    |
-| Industry                | Steel, Power, Cement, Mining, Paper, Others |
-| Application             | Industrial equipment application            |
-| Bearing_Type            | Bearing category (SRB, TRB, Ball, etc.)     |
-| Sales_Channel           | RFQ or Rate Contract                        |
-| Buyer_Category          | OEM, PSU, Distributor, Dealer               |
-| Buyer_Tier              | Top 20% buyers vs others                    |
-| Product_Class           | Store Item, Insurance Spare, Stranger       |
-| Dealer_ID               | Unique dealer identifier                    |
-| Repeat_Order_Count      | Number of repeat purchases                  |
-| Order_Quantity          | Quantity ordered                            |
-| Price_Per_Unit          | Price of bearing                            |
-| Revenue                 | Total order value                           |
-| Lead_Time               | Delivery time category                      |
-| Inventory_Status        | Stock availability                          |
-| Warehouse               | Regional warehouse                          |
-| Competitor_Brand        | Major competitor brand                      |
-| Competitor_Price_Index  | Competitor price comparison                 |
-| Failure_Risk_Score      | Predictive maintenance risk                 |
-| Operating_Temperature_C | Equipment operating temperature             |
-| Contract_Length_Years   | Rate contract duration                      |
-| Machine_Age_Years       | Age of industrial equipment                 |
+### Landing page
+![Landing page](1.png)
+
+### Dashboard overview
+![Dashboard overview](dashbiard.png)
+
+### Demand insights
+![Demand insights](2.png)
+
+### Competitive intelligence
+![Competitive intelligence](3.png)
 
 ---
 
-# Platform Features
+## Project structure
 
-The AI platform contains several modules designed for **aftermarket decision intelligence**.
-
----
-
-## Executive Dashboard
-
-Provides high-level performance indicators including:
-
-* Total aftermarket revenue
-* Active dealer network size
-* Regional sales distribution
-* Repeat order frequency
+- `nbc-aftermarket-ai/` — main React + Vite frontend application
+- `src/pages/` — app pages such as Dashboard, Demand Analytics, Dealer Intelligence, Inventory, and Predictive Maintenance
+- `src/components/` — shared UI and layout components
+- `src/data/` — mock data and demo content
+- `NBC_dataset/` — example dataset used for analytics and forecasting scenarios
+- `Dashboard/` — dashboard-related assets
+- `Deployed Website` — deployment URL reference
 
 ---
 
-## Demand Analytics
+## Tech stack
 
-Analyzes industrial demand patterns.
+### Frontend
+- React
+- Vite
+- CSS / modern UI components
+- Recharts
 
-Capabilities include:
-
-* Region-wise demand analysis
-* Industry-specific bearing demand
-* Bearing type market trends
-* Seasonal demand forecasting
-
----
-
-## Dealer Intelligence
-
-Evaluates dealer performance across NBC’s distribution network.
-
-Key insights:
-
-* Top revenue-generating dealers
-* Dealer repeat order behavior
-* Regional dealer demand clusters
-* Underperforming dealer segments
+### Data & analytics
+- Python-based analytics workflows
+- Pandas / NumPy
+- Scikit-learn / XGBoost
 
 ---
 
-## Inventory Intelligence
+## Dataset overview
 
-Improves supply chain efficiency.
+This project uses a synthetic dataset that mirrors realistic aftermarket business behavior.
 
-Analytics include:
+### Dataset size
+- 3400+ rows
+- 2020–2025 historical data
+- 24+ analytical columns
 
-* Warehouse inventory utilization
-* Lead time distribution
-* Stock-out probability analysis
-* AI-driven inventory reallocation recommendations
-
----
-
-## Model & Results 
-
-- Demand Forecasting Models: ARIMA, XGBoost
-- Stock-out Prediction Accuracy: ~90%
-- Forecast Improvement: 10–15%
-
-
-## Competitive Intelligence
-
-Analyzes market pressure from competing brands.
-
-Competitors analyzed include:
-
-* SKF
-* Schaeffler
-* Timken
-* NRB
-* Chinese import brands
-
-The platform evaluates:
-
-* Price competitiveness
-* Market penetration by industry
-* Competitive pressure across regions
+### Sample fields
+- Year, Month, Region, Industry
+- Bearing type, sales channel, buyer category
+- Revenue, lead time, inventory status
+- Competitor brand and price index
+- Failure risk and machine age
 
 ---
 
-## Predictive Maintenance Insights
+## Run locally
 
-Industrial equipment conditions affect bearing replacement cycles.
+### Prerequisites
+- Node.js 18+ installed
 
-Using machine parameters such as:
+### Steps
 
-* Operating temperature
-* Machine age
-* Failure risk scores
-
-The platform predicts:
-
-* Maintenance cycles
-* High failure risk segments
-* Preventive replacement opportunities
-
----
-
-# AI & Analytics Capabilities
-
-The platform integrates machine learning models for:
-
-### Demand Forecasting
-
-Predicts future bearing demand across industries.
-
-### Dealer Segmentation
-
-Identifies high-value and low-performance dealers.
-
-### Inventory Optimization
-
-Suggests warehouse inventory redistribution.
-
-### Failure Prediction
-
-Estimates bearing replacement likelihood.
-
----
-
-# Technology Stack
-
-Frontend
-React / Next.js
-Tailwind CSS
-Chart.js / Recharts
-
-Backend
-Python (FastAPI) or Node.js
-
-Data Processing
-Pandas
-NumPy
-
-Machine Learning
-Scikit-Learn
-XGBoost
-
-Visualization
-Power BI / D3.js
-
----
-
-# Key Business Impact
-
-If deployed within NBC’s aftermarket ecosystem, this system can enable:
-
-• 8–12% improvement in aftermarket sales capture
-• Reduction in inventory imbalances
-• Better dealer engagement
-• Improved demand forecasting accuracy
-
-Ultimately, this enables NBC Bearings to move toward a **digitally integrated aftermarket ecosystem**.
-
----
-
-# Project Structure
-
-```
-NBC_Aftermarket_AI
-│
-├── dataset
-│   └── NBC_Aftermarket_Bearing_Dataset_2020_2025.csv
-│
-├── backend
-│   └── api_server
-│
-├── frontend
-│   └── analytics_dashboard
-│
-├── models
-│   └── demand_forecasting_model
-│
-└── README.md
+```bash
+cd nbc-aftermarket-ai
+npm install
+npm run dev
 ```
 
----
+Then open:
 
-# Future Improvements
-
-Potential extensions for this platform include:
-
-* Integration with **real dealer POS data**
-* Real-time inventory tracking
-* IoT-based bearing condition monitoring
-* Digital spare parts marketplace integration
+- http://localhost:3000/
 
 ---
+
+## Build for production
+
+```bash
+cd nbc-aftermarket-ai
+npm run build
+```
+
+The production build output will be generated in the `dist/` folder.
+
+---
+
+## Deployment guide (Vercel)
+
+This project is well suited for deployment on Vercel.
+
+### Step-by-step
+
+1. Push your project to GitHub.
+2. Open Vercel and click "New Project".
+3. Import your GitHub repository.
+4. In the project settings, set the project root to:
+   - `nbc-aftermarket-ai`
+5. Set the build command to:
+   - `npm run build`
+6. Set the output directory to:
+   - `dist`
+7. Click "Deploy".
+8. After deployment, Vercel will provide a live URL.
+
+### Replace the placeholder deployment link
+
+After your site is live, update the deployment reference in:
+
+- `Deployed Website`
+- `README.md`
+
+with your own Vercel URL.
+
+---
+
+## Business impact
+
+If deployed in a real aftermarket environment, this platform can help improve:
+
+- forecasting accuracy
+- inventory planning
+- dealer performance visibility
+- proactive maintenance decisions
+- overall aftermarket revenue efficiency
+
+---
+
+## Future improvements
+
+Possible next steps include:
+
+- integration with real dealer POS data
+- real-time inventory tracking
+- IoT-based bearing condition monitoring
+- a digital spare parts marketplace
